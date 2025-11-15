@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dojwsyl5txglx"]
+
+[ext_resource type="PackedScene" uid="uid://s1bbgha0xbjr" path="res://scenes--maps/bedroom.tscn" id="1_0v5ac"]
+[ext_resource type="PackedScene" uid="uid://bkn2r6aa5nbe5" path="res://scenes--maps/barn.tscn" id="2_f2otc"]
+[ext_resource type="PackedScene" uid="uid://d1fxmmg3m4g6u" path="res://scenes--maps/farm.tscn" id="3_wj4jj"]
+
+[node name="mainflow" type="Node2D"]
+
+[node name="bedroom" parent="." instance=ExtResource("1_0v5ac")]
+position = Vector2(477, 123)
+
+[node name="barn" parent="." instance=ExtResource("2_f2otc")]
+position = Vector2(640, 214)
+
+[node name="farm1" parent="." instance=ExtResource("3_wj4jj")]
+position = Vector2(1105, 94)
+
+[node name="barn2" parent="." instance=ExtResource("2_f2otc")]
+position = Vector2(1345, 202)
+
+[node name="farm2" parent="." instance=ExtResource("3_wj4jj")]
+position = Vector2(1809, 78)

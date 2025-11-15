@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bn8tcdwuh8dxa"
+path="res://.godot/imported/barn1.dialogue-09378dfa6dda3ba7d96df85ffafdaa09.tres"
+
+[deps]
+
+source_file="res://dialogue/barn1.dialogue"
+dest_files=["res://.godot/imported/barn1.dialogue-09378dfa6dda3ba7d96df85ffafdaa09.tres"]
+
+[params]
+
+defaults=true

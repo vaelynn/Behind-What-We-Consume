@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6qtyp05mkbm0"]
+
+[ext_resource type="PackedScene" uid="uid://d1fxmmg3m4g6u" path="res://scenes--maps/farm.tscn" id="1_omf5n"]
+[ext_resource type="PackedScene" uid="uid://y8tkoo7csguy" path="res://scenes--char/npc_1.tscn" id="2_xsjuu"]
+[ext_resource type="PackedScene" uid="uid://btr63xn80eqi6" path="res://scenes--char/npc_2.tscn" id="3_7ls05"]
+[ext_resource type="PackedScene" uid="uid://bqul486pbbkxs" path="res://scenes--char/npc_3.tscn" id="4_h7gek"]
+[ext_resource type="PackedScene" uid="uid://b6ictxno80qnr" path="res://scenes--char/master.tscn" id="5_u57tu"]
+[ext_resource type="PackedScene" uid="uid://0sht7soucyy7" path="res://scenes--char/character_body_2d.tscn" id="6_xsjuu"]
+[ext_resource type="PackedScene" uid="uid://bt3jma7ecgsos" path="res://scenes tools/alexdialogue.tscn" id="7_7ls05"]
+[ext_resource type="Resource" uid="uid://dj1vhex7tsykq" path="res://dialogue/farm1.dialogue" id="8_h7gek"]
+
+[node name="scene3" type="Node2D"]
+
+[node name="farm" parent="." instance=ExtResource("1_omf5n")]
+position = Vector2(576, 314)
+
+[node name="npc1" parent="." instance=ExtResource("2_xsjuu")]
+position = Vector2(687, 285)
+
+[node name="npc2" parent="." instance=ExtResource("3_7ls05")]
+position = Vector2(617, 269)
+
+[node name="npc3" parent="." instance=ExtResource("4_h7gek")]
+position = Vector2(578, 303)
+
+[node name="master" parent="." instance=ExtResource("5_u57tu")]
+position = Vector2(664, 300)
+
+[node name="andy" parent="." groups=["player"] instance=ExtResource("6_xsjuu")]
+position = Vector2(657, 261)
+
+[node name="Camera2D" type="Camera2D" parent="andy"]
+zoom = Vector2(6, 6)
+
+[node name="alexdialogue" parent="." instance=ExtResource("7_7ls05")]
+position = Vector2(656, 255)
+dialogue_resource = ExtResource("8_h7gek")

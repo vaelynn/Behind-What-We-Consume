@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt3jma7ecgsos"]
+
+[ext_resource type="Script" uid="uid://dfvhw8ve26c0x" path="res://scripts/alexdialogue.gd" id="1_tdx6k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wq2w"]
+
+[node name="alexdialogue" type="Area2D"]
+script = ExtResource("1_tdx6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8wq2w")

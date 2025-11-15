@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwenkhr58xems"]
+
+[ext_resource type="Texture2D" uid="uid://cnjsj1jxw7b2e" path="res://assets/sprites/alex.pix (friend).png" id="1_apn5y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mfg46"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_apn5y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_23e18"]
+radius = 9.055386
+
+[node name="alex" type="CharacterBody2D"]
+collision_layer = 65
+collision_mask = 65
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mfg46")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 2
+shape = SubResource("CircleShape2D_23e18")

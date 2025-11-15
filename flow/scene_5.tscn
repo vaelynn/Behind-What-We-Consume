@@ -1,0 +1,49 @@
+[gd_scene load_steps=11 format=3 uid="uid://daix0qlldwlat"]
+
+[ext_resource type="PackedScene" uid="uid://d1fxmmg3m4g6u" path="res://scenes--maps/farm.tscn" id="1_wosn6"]
+[ext_resource type="PackedScene" uid="uid://0sht7soucyy7" path="res://scenes--char/character_body_2d.tscn" id="2_g7rja"]
+[ext_resource type="PackedScene" uid="uid://bt3jma7ecgsos" path="res://scenes tools/alexdialogue.tscn" id="3_rhvcf"]
+[ext_resource type="Resource" uid="uid://bhrolxosyvj1e" path="res://dialogue/farm5.dialogue" id="4_wosn6"]
+[ext_resource type="PackedScene" uid="uid://y8tkoo7csguy" path="res://scenes--char/npc_1.tscn" id="5_uv4ue"]
+[ext_resource type="PackedScene" uid="uid://btr63xn80eqi6" path="res://scenes--char/npc_2.tscn" id="6_2wnap"]
+[ext_resource type="PackedScene" uid="uid://bqul486pbbkxs" path="res://scenes--char/npc_3.tscn" id="7_hxpni"]
+[ext_resource type="PackedScene" uid="uid://cwenkhr58xems" path="res://scenes--char/alex.tscn" id="8_xvgyt"]
+[ext_resource type="Script" uid="uid://b2vib3688sl2u" path="res://scripts/door2farm(barn).gd" id="9_2wnap"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxpni"]
+size = Vector2(39, 26.75)
+
+[node name="scene5" type="Node2D"]
+
+[node name="farm" parent="." instance=ExtResource("1_wosn6")]
+position = Vector2(206, 65)
+
+[node name="andy" parent="." groups=["player"] instance=ExtResource("2_g7rja")]
+position = Vector2(287, 25)
+
+[node name="Camera2D" type="Camera2D" parent="andy"]
+zoom = Vector2(6, 6)
+
+[node name="AlexDialogue" parent="." instance=ExtResource("3_rhvcf")]
+position = Vector2(250, 64)
+dialogue_resource = ExtResource("4_wosn6")
+
+[node name="npc1" parent="." instance=ExtResource("5_uv4ue")]
+position = Vector2(183, 35)
+
+[node name="npc2" parent="." instance=ExtResource("6_2wnap")]
+position = Vector2(135, 64)
+
+[node name="npc3" parent="." instance=ExtResource("7_hxpni")]
+position = Vector2(214, 81)
+
+[node name="alex" parent="." instance=ExtResource("8_xvgyt")]
+position = Vector2(224, 38)
+
+[node name="door2" type="Area2D" parent="."]
+position = Vector2(73, -75)
+script = ExtResource("9_2wnap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door2"]
+position = Vector2(212, 77)
+shape = SubResource("RectangleShape2D_hxpni")

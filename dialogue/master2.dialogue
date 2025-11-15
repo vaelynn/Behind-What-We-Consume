@@ -1,0 +1,20 @@
+~ start
+Alex:  Good lord.. 
+Alex: [speed=1] We gon' be rich, Andy!
+Alex: *stuffs his bag with gold*
+
+- This doesn't seem like a good idea..
+	Alex: More for me then~
+
+- Aren't you going to share? 
+	Alex: 'Course i am.
+
+
+
+Alex: Hey, how bout we take a ticket to the city tomorrow? What'dya think?
+Andy: That is if we get outta here at all..
+Alex: [speed=0.2]Aww.. [speed=1] Brighten up a lil! I'll make sure we do.
+
+Andy: [speed=0.2]...
+Andy: (Something feels off...)
+=> END

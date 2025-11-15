@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dfmeda0dbvtky"
+path="res://.godot/imported/farmsecondlast.dialogue-f75a6609c7ef8cc40ae3b2311804e64d.tres"
+
+[deps]
+
+source_file="res://farmsecondlast.dialogue"
+dest_files=["res://.godot/imported/farmsecondlast.dialogue-f75a6609c7ef8cc40ae3b2311804e64d.tres"]
+
+[params]
+
+defaults=true

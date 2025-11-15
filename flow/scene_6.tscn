@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqewa7hj0ystd"]
+
+[ext_resource type="PackedScene" uid="uid://bkn2r6aa5nbe5" path="res://scenes--maps/barn.tscn" id="1_gxbgg"]
+[ext_resource type="PackedScene" uid="uid://cwenkhr58xems" path="res://scenes--char/alex.tscn" id="2_vmfqc"]
+[ext_resource type="PackedScene" uid="uid://bt3jma7ecgsos" path="res://scenes tools/alexdialogue.tscn" id="3_lq48s"]
+[ext_resource type="PackedScene" uid="uid://0sht7soucyy7" path="res://scenes--char/character_body_2d.tscn" id="4_vmfqc"]
+[ext_resource type="Resource" uid="uid://c7d6viuxv12wg" path="res://dialogue/barn3.dialogue" id="5_ewagk"]
+[ext_resource type="Script" uid="uid://7w2r3qw1mpcs" path="res://flow/barn4door.gd" id="6_qi607"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjsg7"]
+size = Vector2(16, 26.75)
+
+[node name="scene6" type="Node2D"]
+
+[node name="farm" parent="." instance=ExtResource("1_gxbgg")]
+position = Vector2(472, 425)
+
+[node name="alex" parent="." instance=ExtResource("2_vmfqc")]
+position = Vector2(542, 250)
+
+[node name="alexdialogue" parent="alex" instance=ExtResource("3_lq48s")]
+position = Vector2(0, 9)
+dialogue_resource = ExtResource("5_ewagk")
+
+[node name="andy" parent="." groups=["player"] instance=ExtResource("4_vmfqc")]
+position = Vector2(543, 334)
+
+[node name="Camera2D" type="Camera2D" parent="andy"]
+zoom = Vector2(6, 6)
+
+[node name="door2" type="Area2D" parent="."]
+position = Vector2(506.76038, 238.2587)
+script = ExtResource("6_qi607")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door2"]
+position = Vector2(5.239624, -2.2586975)
+shape = SubResource("RectangleShape2D_kjsg7")

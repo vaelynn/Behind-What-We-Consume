@@ -1,0 +1,59 @@
+[gd_scene load_steps=13 format=3 uid="uid://domhg64vexjxd"]
+
+[ext_resource type="PackedScene" uid="uid://d1fxmmg3m4g6u" path="res://scenes--maps/farm.tscn" id="1_wjrx8"]
+[ext_resource type="PackedScene" uid="uid://y8tkoo7csguy" path="res://scenes--char/npc_1.tscn" id="2_o25ob"]
+[ext_resource type="PackedScene" uid="uid://btr63xn80eqi6" path="res://scenes--char/npc_2.tscn" id="3_lb2fw"]
+[ext_resource type="PackedScene" uid="uid://bqul486pbbkxs" path="res://scenes--char/npc_3.tscn" id="4_c1d36"]
+[ext_resource type="PackedScene" uid="uid://bt3jma7ecgsos" path="res://scenes tools/alexdialogue.tscn" id="5_o25ob"]
+[ext_resource type="PackedScene" uid="uid://0sht7soucyy7" path="res://scenes--char/character_body_2d.tscn" id="6_c1d36"]
+[ext_resource type="Resource" uid="uid://dfmeda0dbvtky" path="res://farmsecondlast.dialogue" id="6_jnxlg"]
+[ext_resource type="Script" uid="uid://7w2r3qw1mpcs" path="res://flow/barn4door.gd" id="7_sslya"]
+[ext_resource type="Resource" uid="uid://00q5f7q6yjhu" path="res://farmsecond1last.dialogue" id="8_kl6j3"]
+[ext_resource type="Resource" uid="uid://cycfgvvdq1kkl" path="res://farmsecond2last.dialogue" id="8_r7uhc"]
+[ext_resource type="PackedScene" uid="uid://cwenkhr58xems" path="res://scenes--char/alex.tscn" id="8_sslya"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pmo3"]
+size = Vector2(35, 26.75)
+
+[node name="scene 8" type="Node2D"]
+
+[node name="farm" parent="." instance=ExtResource("1_wjrx8")]
+position = Vector2(504, 322)
+
+[node name="npc1" parent="." instance=ExtResource("2_o25ob")]
+position = Vector2(567, 390)
+
+[node name="npc2" parent="." instance=ExtResource("3_lb2fw")]
+position = Vector2(582, 391)
+
+[node name="npc3" parent="." instance=ExtResource("4_c1d36")]
+position = Vector2(595, 391)
+
+[node name="alexdialogue" parent="." instance=ExtResource("5_o25ob")]
+position = Vector2(578, 385)
+dialogue_resource = ExtResource("6_jnxlg")
+
+[node name="andy" parent="." groups=["player"] instance=ExtResource("6_c1d36")]
+position = Vector2(586, 280)
+
+[node name="Camera2D" type="Camera2D" parent="andy"]
+zoom = Vector2(6, 6)
+
+[node name="alexdialogue" parent="andy" instance=ExtResource("5_o25ob")]
+position = Vector2(0, -4)
+dialogue_resource = ExtResource("8_kl6j3")
+
+[node name="door2" type="Area2D" parent="."]
+position = Vector2(506.76038, 238.2587)
+script = ExtResource("7_sslya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door2"]
+position = Vector2(75.739624, 10.7413025)
+shape = SubResource("RectangleShape2D_1pmo3")
+
+[node name="alex" parent="." instance=ExtResource("8_sslya")]
+position = Vector2(467, 247)
+
+[node name="alexdialogue" parent="alex" instance=ExtResource("5_o25ob")]
+position = Vector2(0, -1)
+dialogue_resource = ExtResource("8_r7uhc")

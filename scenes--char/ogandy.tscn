@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b30541sw7eeqa"]
+
+[ext_resource type="Texture2D" uid="uid://bpmq0s0bp6auy" path="res://assets/sprites/ogandy.png" id="1_nmkkh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k3bfk"]
+
+[node name="ogandy" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nmkkh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k3bfk")
